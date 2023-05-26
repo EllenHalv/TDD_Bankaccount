@@ -26,6 +26,10 @@ public class Account {
         this.initialCash = initialCash;
     }
 
+    public double getBalance() {
+        return initialCash;
+    }
+
     public void deposit(Double amount) {
         if (amount == null) {
             throw new NullPointerException("Amount cannot be null.");
@@ -55,9 +59,5 @@ public class Account {
         } else {
             initialCash -= amount;
         }
-    }
-
-    public double getBalance() {
-        return initialCash;
     }
 }
