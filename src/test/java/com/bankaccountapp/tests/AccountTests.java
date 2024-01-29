@@ -1,9 +1,11 @@
 package com.bankaccountapp.tests;
 
 import com.bankaccountapp.bank.Account;
+
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class AccountTests {
 
