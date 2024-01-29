@@ -17,6 +17,22 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      - name: Cache Super Linter
+        uses: actions/cache@v4.0.0
+        with:
+          path: ~/.super-linter
+          key: ${{ runner.os }}-super-linter-${{ hashFiles('**/superlinter.config.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-super-linter-
+
+      - name: Cache Java 21 setup
+        uses: actions/cache@v4.0.0
+        with:
+          path: ~/.java
+          key: ${{ runner.os }}-java-21-${{ hashFiles('**/*.release') }}
+          restore-keys: |
+            ${{ runner.os }}-java-21-
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -25,9 +41,13 @@ jobs:
         with:
           java-version: '21'
           distribution: 'adopt'
+          cache-key: ${{ runner.os }}-java-21-${{ hashFiles('**/*.release') }}
 
       - name: Build project
         run: mvn clean install
 
       - name: Test project
         run: mvn test
+
+      - name: Lint project
+        run: mvn superlinter:check
