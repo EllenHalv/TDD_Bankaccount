@@ -1,6 +1,6 @@
-package tests;
+package com.bankaccountapp.tests;
 
-import bank.Account;
+import com.bankaccountapp.bank.Account;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

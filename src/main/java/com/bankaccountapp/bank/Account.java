@@ -1,4 +1,4 @@
-package bank;
+package com.bankaccountapp.bank;
 
 public class Account {
 
