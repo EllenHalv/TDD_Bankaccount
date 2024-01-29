@@ -18,3 +18,5 @@ To run the unit com.bankaccountapp.bank.tests for the Account class, follow thes
 4. Navigate to the "com.bankaccountapp.bank.tests" package in the source folder.
 5. Run the "AccountTests" class.
 6. The test results should be displayed in the IDE's test runner.
+
+## CI/CD with GitHub Actions
