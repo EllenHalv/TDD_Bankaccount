@@ -1,0 +1,15 @@
+<!-- .github/checkstyle.xml -->
+
+<module name="Checker">
+    <!-- Disable Javadoc-related checks -->
+    <module name="JavadocPackage">
+        <property name="severity" value="ignore"/>
+    </module>
+    <module name="JavadocVariable">
+        <property name="severity" value="ignore"/>
+    </module>
+    <module name="JavadocMethod">
+        <property name="severity" value="ignore"/>
+    </module>
+</module>
+
