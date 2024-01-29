@@ -23,11 +23,17 @@ jobs:
           cd super-linter
           ./bin/install.sh
 
-      - name: Cache Super Linter
+      - name: Install Super Linter
+        run: |
+          git clone https://github.com/super-linter/super-linter.git super-linter
+          cd super-linter
+          ./bin/install.sh
+
+      - name: Cache Super Linter configuration
         uses: actions/cache@v4.0.0
         with:
-          path: ~/.super-linter
-          key: ${{ runner.os }}-super-linter-${{ hashFiles('**/superlinter.config.xml') }}
+          path: superlinter.yaml
+          key: ${{ runner.os }}-super-linter-${{ hashFiles('**/superlinter.yaml') }}
           restore-keys: |
             ${{ runner.os }}-super-linter-
 
