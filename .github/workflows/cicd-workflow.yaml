@@ -1,8 +1,9 @@
+---
 name: CI/CD Workflow
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-test:
