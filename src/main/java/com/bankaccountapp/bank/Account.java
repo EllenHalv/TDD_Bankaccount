@@ -5,7 +5,13 @@ package com.bankaccountapp.bank;
  */
 public final class Account {
 
+    /**
+     * The account number.
+     */
     private String accountNr;
+    /**
+     * The initial cash amount.
+     */
     private double initialCash;
 
     /**
