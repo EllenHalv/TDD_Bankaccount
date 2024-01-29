@@ -31,33 +31,29 @@ public class Account {
     }
 
     public void deposit(Double amount) {
-        if (amount == null) {
-            throw new NullPointerException("Amount cannot be null.");
-        }
-        if (amount < 0.0) {
-            throw new IllegalArgumentException("Amount cannot be negative.");
-        }
-        if (amount == 0.0) {
-            throw new IllegalArgumentException("Amount cannot be 0.");
+        if (checkAmount(amount) == 0.0) {
+            throw new IllegalArgumentException("Amount must be over 0.");
         } else {
-            initialCash += amount;
+        initialCash += amount;
         }
     }
 
     public void withdraw(Double amount) {
-        if (amount == null) {
-            throw new NullPointerException("Amount cannot be null.");
-        }
-        if (amount < 0.0) {
-            throw new IllegalArgumentException("Amount cannot be negative.");
-        }
-        if (amount == 0.0) {
-            throw new IllegalArgumentException("Amount cannot be 0.");
-        }
-        if (amount > initialCash) {
-            throw new IllegalArgumentException("Cannot withdraw an amount larger than the balance.");
+        if (checkAmount(amount) == 0.0 || checkAmount(amount) > initialCash) {
+            throw new IllegalArgumentException("Amount must be greater than balance.");
         } else {
-            initialCash -= amount;
+        initialCash -= amount;
+        }
+    }
+
+    public Double checkAmount(Double amount) {
+        if (amount == null) {
+            return 0.0;
+        }
+        if (amount <= 0.0) {
+            return 0.0;
+        } else {
+            return amount;
         }
     }
 }
