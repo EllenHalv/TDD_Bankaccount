@@ -20,3 +20,4 @@ To run the unit com.bankaccountapp.bank.tests for the Account class, follow thes
 6. The test results should be displayed in the IDE's test runner.
 
 ## CI/CD with GitHub Actions
+This project uses GitHub Actions to run the JUnit tests automatically on every push to the repository.
