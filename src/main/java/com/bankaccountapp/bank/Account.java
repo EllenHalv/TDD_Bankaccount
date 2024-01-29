@@ -1,56 +1,103 @@
 package com.bankaccountapp.bank;
 
-public class Account {
+/**
+ * This is a sample class representing a bank account.
+ */
+public final class Account {
 
     private String accountNr;
     private double initialCash;
 
-    public Account(String accountNr, double initialCash) {
+    /**
+     * Constructs an Account with the specified account number and initial cash.
+     *
+     * @param accountNr   The account number.
+     * @param initialCash The initial cash amount.
+     */
+    public Account(final String accountNr, final double initialCash) {
         this.accountNr = accountNr;
         this.initialCash = initialCash;
     }
 
+    /**
+     * Gets the account number.
+     *
+     * @return The account number.
+     */
     public String getAccountNr() {
         return accountNr;
     }
 
-    public void setAccountNr(String accountNr) {
+    /**
+     * Sets the account number.
+     *
+     * @param accountNr The account number to set.
+     */
+    public void setAccountNr(final String accountNr) {
         this.accountNr = accountNr;
     }
 
+    /**
+     * Gets the initial cash amount.
+     *
+     * @return The initial cash amount.
+     */
     public double getInitialCash() {
         return initialCash;
     }
 
-    public void setInitialCash(double initialCash) {
+    /**
+     * Sets the initial cash amount.
+     *
+     * @param initialCash The initial cash amount to set.
+     */
+    public void setInitialCash(final double initialCash) {
         this.initialCash = initialCash;
     }
 
+    /**
+     * Gets the current balance.
+     *
+     * @return The current balance.
+     */
     public double getBalance() {
         return initialCash;
     }
 
-    public void deposit(Double amount) {
+    /**
+     * Deposits a specified amount into the account.
+     *
+     * @param amount The amount to deposit.
+     */
+    public void deposit(final Double amount) {
         if (checkAmount(amount) == 0.0) {
             throw new IllegalArgumentException("Amount must be over 0.");
         } else {
-        initialCash += amount;
+            initialCash += amount;
         }
     }
 
-    public void withdraw(Double amount) {
+    /**
+     * Withdraws a specified amount from the account.
+     *
+     * @param amount The amount to withdraw.
+     */
+    public void withdraw(final Double amount) {
         if (checkAmount(amount) == 0.0 || checkAmount(amount) > initialCash) {
             throw new IllegalArgumentException("Amount must be greater than balance.");
         } else {
-        initialCash -= amount;
+            initialCash -= amount;
         }
     }
 
-    public Double checkAmount(Double amount) {
-        if (amount == null) {
-            return 0.0;
-        }
-        if (amount <= 0.0) {
+    /**
+     * Checks if the given amount is valid.
+     *
+     * @param amount The amount to check.
+     * @return The valid amount.
+     */
+    public Double checkAmount(final Double amount) {
+        if (amount == null || amount <= 0.0) {
             return 0.0;
         } else {
             return amount;

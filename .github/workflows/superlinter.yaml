@@ -11,10 +11,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Configure Checkstyle
-        run: |
-          echo "content-of-your-custom-checkstyle-xml" > .github/checkstyle.xml
-
       - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
