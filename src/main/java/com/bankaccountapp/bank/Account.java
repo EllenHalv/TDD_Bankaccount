@@ -37,10 +37,10 @@ public final class Account {
     /**
      * Sets the account number.
      *
-     * @param accountNr The account number to set.
+     * @param accNr The account number to set.
      */
-    public void setAccountNr(final String accountNr) {
-        this.accountNr = accountNr;
+    public void setAccountNr(final String accNr) {
+        this.accountNr = accNr;
     }
 
     /**

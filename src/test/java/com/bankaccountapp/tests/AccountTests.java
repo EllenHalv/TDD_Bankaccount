@@ -11,11 +11,29 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  */
 public class AccountTests {
 
+    /**
+     * The account number.
+     */
     private static final String ACCOUNT_NUMBER = "123456789";
+    /**
+     * The initial cash amount.
+     */
     private static final double INITIAL_CASH = 99999.99;
+    /**
+     * The negative amount.
+     */
     private static final double NEGATIVE_AMOUNT = -1.0;
+    /**
+     * The null amount.
+     */
     private static final Double NULL_AMOUNT = null;
+    /**
+     * The zero amount.
+     */
     private static final double ZERO_AMOUNT = 0.0;
+    /**
+     * The insufficient balance amount.
+     */
     private static final double INSUFFICIENT_BALANCE_AMOUNT = 200000.00;
 
     /**

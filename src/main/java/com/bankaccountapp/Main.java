@@ -1,7 +1,5 @@
 package com.bankaccountapp;
 
-;
-
 public class Main {
     /**
      * The main method.
