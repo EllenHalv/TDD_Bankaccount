@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * Tests for the {@link Account} class.
  */
-public class AccountTests {
+public class AccountTest {
 
     /**
      * The account number.
