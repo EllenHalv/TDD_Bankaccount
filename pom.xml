@@ -38,7 +38,7 @@
         <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
         <testResources>
             <testResource>
-                <directory>${basedir}/path/to/your/test/resources</directory>
+                <directory>${basedir}/src/test/java</directory>
             </testResource>
         </testResources>
     </build>
