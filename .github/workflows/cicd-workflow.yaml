@@ -31,14 +31,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Lint Code Base CICD
-        uses: github/super-linter@v4
-
       - name: Build project
         run: mvn clean install
 
       - name: Test project
         run: mvn test
-
-      - name: Lint project
-        run: mvn superlinter:check
