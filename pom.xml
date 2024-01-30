@@ -35,7 +35,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <testSourceDirectory>${basedir}/src/test/java/com/bankaccountapp/tests/AccountTests.java</testSourceDirectory>
+        <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
         <testResources>
             <testResource>
                 <directory>${basedir}/path/to/your/test/resources</directory>
